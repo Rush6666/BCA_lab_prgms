@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="stylesheet">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="output">
+                    <xs:complexType>
+                        <xs:attribute name="method" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="template">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="html">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="body">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="b">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="value-of">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="select" use="required" />
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="h1">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="value-of">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="select" use="required" />
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="br" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="match" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="version" type="xs:decimal" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>Menu driven Program</title>
+        <script  type="text/javascript">
+            function findcost()
+            {
+                var starter=document.getElementById("starter");
+                var main = document.getElementById("main");
+                var soft = document.getElementById("soft");
+                var selecteditem ="Item \t\t\t\t\t : Price \n\n\n";
+                var total = 0;
+                for (var i = 0; i<starter.options.length;i++)
+                {
+                    var choice = starter.options[i];
+                    if(choice.selected == true )
+                    {
+                        var price = parseInt(choice.value);
+                        total = total + price;
+                        selecteditem = selecteditem + choice.text + "\t\t\t\t\t" +price+ "\n";
+
+                    }
+                }
+                for (var i =0; i<main.options.length;i++)
+                {
+                    var choice = main.options[i];
+                    if(choice.selected == true )
+                    {
+                        var price = parseInt(choice.value);
+                        total = total + price;
+                        selecteditem = selecteditem + choice.text + "\t\t\t\t\t" +  price  + "\n";
+
+                    }
+                }
+                for (var i =0; i<soft.options.length;i++)
+                {
+                    var choice = soft.options[i];
+                    if(choice.selected == true )
+                    {
+                        var price = parseInt(choice.value);
+                        total = total + price;
+                        selecteditem = selecteditem + choice.text + "\t\t\t\t\t" +price+ "\n";
+
+                    }
+                }
+                selecteditem = selecteditem + "\n\n\n Total cost \t\t\t\t\t" + total ;
+                document.getElementById("display").value=selecteditem;
+
+
+            }
+        </script>
+
+
+    </head>
+    <body style="background-color: gray;">
+        <br/><br/><br/><br/>
+        <form name="menuform">
+            <table style="border: 10px; width: 700px; background-color: black;">
+                <tr>
+                    <th colspan="3" style="  margin: 0px; color: antiquewhite;">
+                    
+                    <h2 > Restaurant Menu Details </h2>
+                </th>
+                </tr>
+                <tr>
+                    <td>Starters</td>
+                    <td>Main Guide</td>
+                    <td>Soft Drinks</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <select id="starter" size="4" multiple="multiple">
+                            <option value="60">Gobi Manchrian</option>
+                            <option value="50">Tamato Soup</option>
+                            <option value="120">Mushroom Tikka</option>
+                            <option value="25">Corn Soup</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="main" size="4" multiple="multiple">
+                            <option value="85">Fried Rice</option>
+                            <option value="100">Veg Pulavo</option>
+                            <option value="150">Mushroom Briyani</option>
+                            <option value="250">Rooti&Panner</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="soft" size="4" multiple="multiple">
+                            <option value="30">Maaza</option>
+                            <option value="70">CocaCola</option>
+                            <option value="50">Lime Soda</option>
+                            <option value="50">Jeera Juice</option>
+                        </select>
+                    </td>
+                
+                <td colspan="3" style="align-items: center;">
+                    <textarea id="display" rows="10" cols="70"></textarea>
+
+                </td>
+                </tr>
+                <tr>
+                           <td colspan="3" style="align-items: center;">
+                            <input type="button" value="Find Total Cost" onclick="findcost()"><br/>
+                            <input type="reset" value="clear All"/>
+                           </td>
+                        </tr>
+
+            </table>
+        </form>
+    </body>
+</html>

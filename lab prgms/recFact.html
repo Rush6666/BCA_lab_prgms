@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            Recirsive Factorial function
+        </title>
+        <script type="text/javascript">
+            var num,n;
+            num=window.prompt("Enter a number to find the Factorial","0");
+            n=prompt(num);
+            document.write("<h1><center>Factorial of " + n + " is :");
+                for (var i=0;i<=n;i++)
+                    var f=fact(num);
+                    document.write("<i>" +f+"</i></center></h1>");
+                function fact(n){
+                    if(n == 0)
+                     return 1;
+                     else
+                     return n*fact(n-1);
+                }
+        </script>
+    </head>
+    <body></body>
+</html>

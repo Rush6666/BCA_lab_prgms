@@ -1,0 +1,18 @@
+body{
+    background: silver;
+}
+
+h1{
+    border: thick;
+    background-color: gray;
+}
+
+h2{
+    border: medium;
+    background-color: yellow;
+}
+
+p{
+    border: thin;
+    text-decoration: underline;
+}
